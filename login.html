@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lindisfarne Safari Park</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+	
+	
+	<script language="javascript">
+        var flag=0;
+        function uname()
+        {
+            pass=loginform.uname.value;
+            if(pass=="")
+            {
+                document.getElementById("error0").innerHTML="Enter Valid User Name Here!";   
+                flag=1;
+            }
+        }   
+        function password()
+        {
+            pass=loginform.password.value;
+            if(pass=="")
+            {
+                document.getElementById("error1").innerHTML="Enter Valid Password!";   
+                flag=1;
+            }else if(pass.length<6){
+                document.getElementById("error1").innerHTML="Password Must Be 6 Character Long!";
+                flag=1;
+            }
+        }
+
+        function check(form)
+        {
+            flag=0;
+            uname();
+            password();
+            if(flag==1)
+                return false;
+            else
+                return true;
+        }
+
+    </script>
+	
+	
+
+    <style>
+       
+        .image{
+            width: 30%;
+            float: left;
+        }
+		
+        .image image{
+            height: 50px;  
+        }
+       
+       
+        .top,.bottom{
+            height: 210px;
+            width: 100%;
+            background-color: #569FF3;
+            height: 35px;
+            overflow: hidden
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <div class="mainmenu">
+           <div class="right">
+              
+               <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+           </div>
+            
+        </div>
+        <div class="body">
+        
+        <div class="image">
+            <img src="image/Safari-Park2.JPG" alt="" style="height:200px">
+        </div>
+        <div class="requirements">
+        
+        <div class="regform">
+        
+        
+        <form name="loginform" action="login.php" method="post" onSubmit="return check(this)" >
+		<table cellpadding="5px">
+			<tr>
+				<td>User Name :</td>
+				
+				<td>
+				<div id="error0"></div>
+				 <input type="uname" name="uname" placeholder="User Name" onclick="make_blank()"/>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				
+				<td>
+				<div id="error1"></div>
+				 <input type="password" name="password" placeholder='Password'/>
+				</td>
+				<td></td>
+			</tr>		
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="Log in" id='signup'/>
+				</td>
+			</tr>
+		</table>
+		</form>
+
+		<p>Not Registered Yet? Do <a href='reg.html'>Sign Up</a></p>
+        </div>
+        </div>
+        <div class="bottom">
+        <p>Copyright © All right reservse to Lindisfarne Safari Park</p>    
+        </div>
+        </div>
+  
+    </div>
+</body>
+</html>
+

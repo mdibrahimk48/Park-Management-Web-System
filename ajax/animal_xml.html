@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head> </head>
+	<body onLoad="show()">
+		<script language="javascript">
+		function show(){		
+		var url;
+		url="animal_xml.php";
+		if(window.XMLHttpRequest){
+			//code  for modern browsers
+			request = new XMLHttpRequest();
+			}else{
+					//code for older version of internet explorer
+					request=new ActiveXObject("Microsoft.XMLHttp");
+				}
+		request.onreadystatechange=function(){
+					if(request.readyState==4 && request.status==200){
+			var text = "<tr><td>Animal ID</td><td>Animal Name</td><td>Animal Image</td><td>Animal Description</td><td>Animal Quantity</td></tr>";
+			elements = request.responseXML.documentElement.getElementsByTagName("Animal");
+			
+			for (i = 0; i<elements.length;  i++) {
+			animal_id = elements[i].getElementsByTagName("animal_id");
+			animal_name = elements[i].getElementsByTagName("animal_name");
+			animal_image = elements[i].getElementsByTagName("animal_image");
+			animal_description = elements[i].getElementsByTagName("animal_description");
+			animal_quantity = elements[i].getElementsByTagName("animal_quantity");
+			
+			text += "<tr><td>" +animal_id[0].firstChild.nodeValue+"</td>";
+			text += "<td>" +animal_name[0].firstChild.nodeValue+"</td>";
+			text += "<td>" +animal_image[0].firstChild.nodeValue+"</td>";
+			text += "<td>" +animal_description[0].firstChild.nodeValue+"</td>";
+			text += "<td>" +animal_quantity[0].firstChild.nodeValue+"</td></tr>";
+			}
+			document.getElementById("data").innerHTML = text;
+			}
+		}
+		request.open("GET",url, true);
+		request.send();
+	}
+	</script>
+<table id="data" border="1"></table>
+</body>
+			
+</html>

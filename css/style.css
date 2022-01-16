@@ -1,0 +1,173 @@
+body{
+	margin: 0 auto;
+	padding: 0;
+}
+
+img{
+	width: 400px;
+	height: 520px;	
+}
+
+body{
+	background: #ccc;
+}
+
+
+p{
+	font-family: Arial;
+	font-size: 10;
+}
+
+.main{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.mainmenu{
+    overflow: hidden;
+}
+
+.mainmenu li .active{
+    background-color: #12CB06;
+}
+
+.mainmenu .right ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#79B849;
+}
+
+
+.mainmenu .right li {
+    float: left;
+}
+
+.mainmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mainmenu li a:hover {
+    background-color:#569FF3;
+    color: black;
+    
+}
+
+input,#select{
+    width: 99%;
+    height: 28px;
+}
+
+select{
+    width: 100%;
+}
+
+.body{
+    
+    margin: auto;
+    height: auto;
+    text-align: center;
+	overflow: hidden;
+}
+
+.requirements{
+    width: 100%;
+    
+	
+}
+.requirements form{
+    width: 50%;
+    float: left;
+}
+
+.orderlist{
+    width: 40%;
+    border: 2px solid black; 
+}
+
+.orderlist table{
+   width: 100%;
+    text-align: center;
+}
+
+.requirements .packagelist{
+    float: right;
+    width: 40%;
+    margin-right: 1%;
+}
+
+.packagelist table{
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px; 
+}
+.packagelist table th{
+    color: gray;
+    padding: 10px;
+}
+
+.bookpackage{
+    background-color:dodgerblue;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.form{
+    width: 100%;
+     border-top: dotted 1px black;
+    overflow: hidden;
+}
+
+.form table{
+    width: 80%;
+   margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+	padding:10px;
+}
+
+.form .book{
+    width: 20%;
+    height: 40px;
+    background-color: darkslategrey;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 25px;
+	font-weight:bold;
+    
+}
+#error0,#error1,#error3, #error4, #error5, #error6, #error7, #error8{
+    color: red;
+}
+
+
+#signup{
+    width: 35%;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    color: aliceblue;
+    margin-left: 28%;
+    background-color: #79B849; 
+}
+
+.editorderform{
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+.regform table{
+width: 100%;
+}
+
+
